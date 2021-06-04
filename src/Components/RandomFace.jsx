@@ -3,6 +3,16 @@ import React, { useEffect, useState } from "react";
 // const CoinGeckoClient = new CoinGecko();
 
 function Img() {
+  function timer() {
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var s = d.getSeconds();
+    var secondsUntilEndOfDate = 24 * 60 * 60 - h * 60 * 60 - m * 60 - s;
+    var remainder = secondsUntilEndOfDate % 30;
+    console.log(remainder);
+  }
+  setInterval(timer, 1000);
   // var RandomImgurl = "https://fakeface.rest/face/json";
   var AnsrandomNo = Math.floor(Math.random() * 3) + 1;
   function info(e) {
@@ -22,6 +32,7 @@ function Img() {
       <div className="row">
         <div className="col">
           <img
+            className="card"
             id="1"
             onClick={info}
             src="https://fakeface.rest/face/view/1"
@@ -31,6 +42,7 @@ function Img() {
         </div>
         <div className="col">
           <img
+            className="card"
             id="2"
             onClick={info}
             src="https://fakeface.rest/face/view/3"
@@ -40,6 +52,7 @@ function Img() {
         </div>
         <div className="col">
           <img
+            className="card"
             id="3"
             onClick={info}
             src="https://fakeface.rest/face/view/2"
@@ -49,6 +62,7 @@ function Img() {
         </div>
         <div className="col">
           <img
+            className="card"
             id="4"
             onClick={info}
             src="https://fakeface.rest/face/view/4"

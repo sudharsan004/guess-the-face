@@ -7,7 +7,7 @@ function Nav() {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="/">
-          &ensp;Face Guess Game
+          &ensp;Guess the Face
         </a>
       </nav>
     </>

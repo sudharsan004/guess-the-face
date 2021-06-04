@@ -1,6 +1,6 @@
 import "./styles.css";
-import Nav from ".Components/Nav";
-import RandomFace from ".Components/RandomFace";
+import Nav from "./Components/Nav";
+import RandomFace from "./Components/RandomFace";
 
 export default function App() {
   return (

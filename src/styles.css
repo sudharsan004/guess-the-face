@@ -2,3 +2,13 @@ h3 {
   font-family: sans-serif;
   text-align: center;
 }
+body {
+  background-color: #111;
+  color: white;
+}
+img {
+  transition: transform 0.2s;
+}
+img:hover {
+  transform: scale(1.03);
+}
