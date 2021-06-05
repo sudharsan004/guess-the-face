@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import CoinGecko from "coingecko-api";
-// const CoinGeckoClient = new CoinGecko();
+import question from '../q';
 
 function Img() {
   function timer() {
@@ -13,7 +12,7 @@ function Img() {
     console.log(remainder);
   }
   setInterval(timer, 1000);
-  // var RandomImgurl = "https://fakeface.rest/face/json";
+
   var AnsrandomNo = Math.floor(Math.random() * 3) + 1;
   function info(e) {
     var choose = e.target.id;
@@ -75,10 +74,9 @@ function Img() {
       <br />
       <center>
         <h5>
-          Who would most likely{" "}
           {
-            ["save others", "cheat", "solve issues", "kill"][
-              Math.floor(Math.random() * 3)
+           question[
+              Math.floor(Math.random() * (question.length))
             ]
           }
           ?

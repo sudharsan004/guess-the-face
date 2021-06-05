@@ -3,7 +3,8 @@ h3 {
   text-align: center;
 }
 body {
-  background-color: #111;
+  background: linear-gradient(120deg,#82bc23,#3db4e7);
+  /* background-color: #111; */
   color: white;
 }
 img {
