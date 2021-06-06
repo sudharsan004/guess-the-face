@@ -1,19 +1,44 @@
 import React, { useEffect, useState } from "react";
-import question from '../q';
+import question from '../question_data';
+import images from '../image_data';
 
 function Img() {
+  console.log(images)
+  console.log(question)
+  // first initiate current count
+  const [AnsrandomNo,setAns] = useState(Math.floor(Math.random() * 3)+1)
+  console.log(AnsrandomNo)
+  const [CurrentCount, setCurrentCount] = useState('Math.trunc((secondsUntilEndOfDate / 30))')
+  const [remainder, setRemainder] = useState('secondsUntilEndOfDate % 30')
+  useEffect(() => {
+    var d = new Date();
+    var h = d.getHours();
+    var m = d.getMinutes();
+    var s = d.getSeconds();
+    var secondsUntilEndOfDate = 24 * 60 * 60 - h * 60 * 60 - m * 60 - s;
+    setCurrentCount(Math.trunc(secondsUntilEndOfDate / 30))
+    setRemainder(secondsUntilEndOfDate % 30)
+    document.getElementsByTagName('h5')[0].innerText =question[CurrentCount]
+  }, [CurrentCount])
+
   function timer() {
     var d = new Date();
     var h = d.getHours();
     var m = d.getMinutes();
     var s = d.getSeconds();
     var secondsUntilEndOfDate = 24 * 60 * 60 - h * 60 * 60 - m * 60 - s;
-    var remainder = secondsUntilEndOfDate % 30;
-    console.log(remainder);
+    var count = (secondsUntilEndOfDate / 30);
+    var rem = secondsUntilEndOfDate % 30;
+    setRemainder(rem)
+    // console.log(Math.trunc(count), remainder);
+    if (remainder == 0) {
+      setCurrentCount(count)
+    }
   }
   setInterval(timer, 1000);
 
-  var AnsrandomNo = Math.floor(Math.random() * 3) + 1;
+  
+  console.log(AnsrandomNo)
   function info(e) {
     var choose = e.target.id;
     if (AnsrandomNo == choose) {
@@ -34,7 +59,7 @@ function Img() {
             className="card"
             id="1"
             onClick={info}
-            src="https://fakeface.rest/face/view/1"
+            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount]}`}
             alt="h"
             width="200"
           />
@@ -44,7 +69,7 @@ function Img() {
             className="card"
             id="2"
             onClick={info}
-            src="https://fakeface.rest/face/view/3"
+            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount+1]}`}
             alt="h"
             width="200"
           />
@@ -54,7 +79,7 @@ function Img() {
             className="card"
             id="3"
             onClick={info}
-            src="https://fakeface.rest/face/view/2"
+            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount+2]}`}
             alt="h"
             width="200"
           />
@@ -64,7 +89,7 @@ function Img() {
             className="card"
             id="4"
             onClick={info}
-            src="https://fakeface.rest/face/view/4"
+            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount+3]}`}
             alt="h"
             width="200"
           />
@@ -74,14 +99,11 @@ function Img() {
       <br />
       <center>
         <h5>
-          {
-           question[
-              Math.floor(Math.random() * (question.length))
-            ]
-          }
+          
           ?
         </h5>
       </center>
+      <p>{remainder}</p>
     </>
   );
 }
