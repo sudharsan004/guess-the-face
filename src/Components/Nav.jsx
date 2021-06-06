@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 // const CoinGeckoClient = new CoinGecko();
 
 function Nav() {
+ 
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

@@ -1,0 +1,34 @@
+{
+    "values": [
+        {
+            "question": "Who is most likely to become a bestselling author?",
+            "images": [
+                "female_50_e0d262e3d990ad74b1f96576e06437d1acb69d93.jpg",
+                "female_30_d37e5620022606a68b8b3fa3c46c7d3e3eaf963b.jpg",
+                "female_36_faaa056bebad22c465e1d3871bf6d14ea69c08d8.jpg",
+                "male_27_2a9e780bbb714c2a0c3166139104bb65185086b9.jpg"
+            ],
+            "votes": [
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "question": "Who is most likely to become a bestselling author?",
+            "images": [
+                "female_50_e0d262e3d990ad74b1f96576e06437d1acb69d93.jpg",
+                "female_30_d37e5620022606a68b8b3fa3c46c7d3e3eaf963b.jpg",
+                "female_36_faaa056bebad22c465e1d3871bf6d14ea69c08d8.jpg",
+                "male_27_2a9e780bbb714c2a0c3166139104bb65185086b9.jpg"
+            ],
+            "votes": [
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ]
+}
