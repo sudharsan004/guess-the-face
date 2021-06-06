@@ -18,6 +18,7 @@ function Img() {
         ref.once('value', (snapshot) => {
             setData(snapshot.val())
             console.log('test', snapshot.val());
+            console.log(data.images[0])
         });
     }
     get(count)
@@ -34,6 +35,10 @@ function Img() {
         })
     }
    
+    function info(){
+        console.log('')
+    }
+    
     return (
         <>
 
@@ -43,7 +48,7 @@ function Img() {
             className="card"
             id="1"
             onClick={info}
-            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount]}`}
+            src={`https://thumb.fakeface.rest/thumb_${data.images[0]}`}
             alt="h"
             width="200"
           />
@@ -53,7 +58,7 @@ function Img() {
             className="card"
             id="2"
             onClick={info}
-            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount+1]}`}
+            src={`https://thumb.fakeface.rest/thumb_${data.images[1]}`}
             alt="h"
             width="200"
           />
@@ -63,7 +68,7 @@ function Img() {
             className="card"
             id="3"
             onClick={info}
-            src={`https://thumb.fakeface.rest/thumb_${images[CurrentCount+2]}`}
+            src={`https://thumb.fakeface.rest/thumb_${data.images[2]}`}
             alt="h"
             width="200"
           />
@@ -73,7 +78,7 @@ function Img() {
             className="card"
             id="4"
             onClick={info}
-            src={`https://thumb.fakeface.rest/thumb_${data["images"][4]}`}
+            src={`https://thumb.fakeface.rest/thumb_${data.images[3]}`}
             alt="h"
             width="200"
           />
@@ -84,10 +89,10 @@ function Img() {
       <center>
         <h5>
           
-          ?
+          {data["question"]}
         </h5>
       </center>
-      <p>{remainder}</p>
+      <p>{5}</p>
 
         </>
     );
